@@ -1,0 +1,81 @@
+body{
+margin-left:20vw;
+margin-right:20vw;
+margin-top:5vh;
+background-color: rgb(207, 229, 196);
+}
+.grid {
+  display:grid; 
+  grid-template-areas:
+    "avatar   avatar  switches"
+    "response   response   cell"
+    "user   user buttons";
+  grid-template-columns:auto auto auto; 
+  grid-template-rows:  auto 10vw 20vw  ; 
+
+
+}
+.avatar{
+grid-area: avatar;
+background-color: rgb(67, 168, 99);
+text-align: center;
+max-width:60vw;
+max-height:40vh;
+}
+
+.response{
+grid-area: response;
+background-color: rgb(141, 178, 230);
+text-align: center;
+max-width:40vw;
+max-height:20vh;
+margin-left: 7vw;
+margin-right: 7vw;
+font-size: clamp(min(0.1vh,0.1vw), min(2vh,2vw), min(3vh,3vw));
+}
+
+.dialogue{
+grid-area: user;
+background-color: rgb(87, 124, 121);
+text-align: center;
+max-width:60vw;
+max-height:fit-content;
+}
+.switches{
+grid-area: switches;
+background-color: rgba(234, 127, 255, 0.444);
+text-align: center;
+}
+.cell{
+grid-area: cell;
+background-color: rgba(255, 127, 138, 0.393);
+text-align: center;
+}
+.buttons{
+grid-area: buttons;
+background-color: rgba(86, 32, 250, 0.441);
+text-align: center;
+max-height: 30vh;
+}
+.dialogue button {
+display:block;
+  background-color: rgba(99, 209, 116, 0.984);
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: clamp(min(0.1vh,0.1vw), min(1.5vh,1.5vw), min(3vh,3vw));
+
+}
+/* ADDED: inline link style */
+.inline-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0a58ca;
+  font: inherit;
+}
